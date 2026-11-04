@@ -1,22 +1,51 @@
+const friends = [
+  {
+    title: '„ქისა“',
+    body: 'აპლიკაცია, რომლითაც შეგიძლიათ გადარიცხვების განხორციელება. ხევსურეთის პანელების პროექტის დაფინანსებისას საშუალება მოგვეცა, გავცნობოდით ამ აპლიკაციის დამფუძნებელს და გამოგვეყენებინა აპი. საქართველოს სახელით დიდ მადლობას გიხდით!',
+  },
+  {
+    title: '„აი-იო“',
+    body: '3–8 წლის ბავშვებისთვის განკუთვნილი სახალისო საგანმანათლებლო აპლიკაცია. ამ შესანიშნავი აპის დამფუძნებელი ჩვენი ინიციატივის ვებგვერდის შემქმნელი და ზედამხედველია. საქართველოს სახელით დიდ მადლობას გიხდით!',
+  },
+  {
+    title: '„შაინ ენერჯი“',
+    body: 'თანამედროვე მწვანე ენერგიის კომპანია. ჩვენთან თანამშრომლობის გამოცდილება: „შაინ ენერჯიმ“ სოფელ ხონეს მზის პანელები შესწირა, ხევსურეთში აიტანა და დაამონტაჟა. საქართველოს სახელით დიდ მადლობას გიხდით!',
+  },
+  {
+    title: '„საფიხვნოს“ ხევსურთა ჯგუფი',
+    body: 'თავის თემს მარჯვენა ხელად უდგას და ცდილობს, მისი ბინადრები უფრო ჯანმრთელები, მრავალრიცხოვნები და მხნენი გახადოს. მათი თანადგომით რუსეთის საზღვრისპირა სოფელი ხონე ამ ზამთარს უშუქოდ არ გაატარებს. საქართველოს სახელით დიდ მადლობას გიხდით!',
+  },
+  {
+    title: '„ცოდნის კაფე“',
+    body: 'წნორში სინათლის, განათლების, მეგობრობისა და თანადგომის წყაროა. მათი მითითებით აღმოვაჩინეთ ის საინტერესო და გასათვალისწინებელი გზები, რომლებიც ჩვენმა წინაპრებმა ჩვენსავით გაიარეს ერთმანეთის დასახმარებლად და გასაძლიერებლად, ჯერ კიდევ გასული საუკუნის დასაწყისში. საქართველოს სახელით დიდ მადლობას გიხდით!',
+  },
+]
+
 function Friends() {
   return (
     <>
       <h1 className="section-title">მეგობრები და სპონსორები</h1>
-      <p className="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <div className="card">
+      <p className="lead">ჩვენი მეგობრები:</p>
+      {friends.map((friend) => (
+        <div className="card" key={friend.title}>
+          <h3>{friend.title}</h3>
+          <p>{friend.body}</p>
+        </div>
+      ))}
+      <div className="notice">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          nec odio praesent libero sed cursus ante dapibus diam. Sed nisi
-          nulla quis sem at nibh elementum imperdiet.
+          გინდა შემოგვიერთდე? გინდა შემოიტანო შენი ინიციატივა? ყოველ
+          შაბათს, საქართველოს დროით საღამოს 9 საათზე, შემოდი ზუმში ამ
+          ბმულით. გელოდებით!
         </p>
-      </div>
-      <div className="card">
         <p>
-          Duis sagittis ipsum praesent mauris fusce nec tellus sed augue
-          semper porta mauris massa vestibulum lacinia arcu eget nulla class
-          aptent taciti sociosqu ad litora torquent.
+          <a
+            href="https://us06web.zoom.us/j/82266880413?pwd=uDveJrNnNCXM2gYfyRtgllzMgzT27v.1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://us06web.zoom.us/j/82266880413?pwd=uDveJrNnNCXM2gYfyRtgllzMgzT27v.1
+          </a>
         </p>
       </div>
     </>
